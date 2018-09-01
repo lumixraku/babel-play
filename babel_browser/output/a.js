@@ -1,14 +1,20 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
 
-var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+var _getIterator2 = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/get-iterator"));
 
-var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+var _regenerator = _interopRequireDefault(require("@babel/runtime-corejs2/regenerator"));
+
+var _promise = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/promise"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/asyncToGenerator"));
+
+var _from = _interopRequireDefault(require("@babel/runtime-corejs2/core-js/array/from"));
 
 var s = [1, 3, 5].includes(1);
 console.log(s);
-var v = Array.from('foo');
+var v = (0, _from.default)('foo');
 
 var fn =
 /*#__PURE__*/
@@ -22,7 +28,7 @@ function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return new Promise(function (resolve, reject) {
+            return new _promise.default(function (resolve, reject) {
               resolve(2);
             });
 
@@ -54,7 +60,7 @@ _regenerator.default.mark(function vv() {
       switch (_context2.prev = _context2.next) {
         case 0:
           _context2.next = 2;
-          return new Promise(function (resolve, reject) {
+          return new _promise.default(function (resolve, reject) {
             resolve(1);
           });
 
@@ -75,7 +81,7 @@ var _didIteratorError = false;
 var _iteratorError = undefined;
 
 try {
-  for (var _iterator = fun()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+  for (var _iterator = (0, _getIterator2.default)(fun()), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
     var n = _step.value;
     console.log("n:::", n); //n::: Promise { 1 }
   }
